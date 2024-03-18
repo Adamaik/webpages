@@ -17,7 +17,14 @@ const routes = [
       {
         path: '/operate/home',
         name: '主页',
-        component: ()=>import('../views/HomePageView.vue')
+        component: ()=>import('../views/HomePageView.vue'),
+        children:[
+          {
+            path:'/operate/home/search',
+            name:'搜索',
+            component:()=>import('../views/SearchView.vue')
+          }
+        ]
       },
       {
         path: '/operate/about',

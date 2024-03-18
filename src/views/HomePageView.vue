@@ -2,10 +2,11 @@
   <div>
     <div id="white"></div>
     <div id="searchsize">
-      <el-input placeholder="搜索案例" v-model="input">
-        <el-button slot="append" icon="el-icon-search"></el-button>
-      </el-input>
+        <el-input placeholder="搜索案例" v-model="input">
+          <el-button slot="append" icon="el-icon-search" index="/operate/home/search"></el-button>
+        </el-input>    
     </div>
+    <router-view>
     <el-row :gutter="50" id="blocktop">
       <el-col :span="5" :offset="2">
         <div class="grid-content bg-purple"></div>
@@ -48,6 +49,7 @@
         <div class="grid-content bg-purple"></div>
       </el-col>
     </el-row>
+  </router-view>
   </div>
 </template>
 
