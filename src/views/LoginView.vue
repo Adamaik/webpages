@@ -39,7 +39,7 @@
         }).then(res => {
           if (res.data.code == 1) {
             let temp = res.data.data;
-            this.$store.commit('setJwt', temp)
+            localStorage.setItem('jwt', temp)
             this.$store.commit('setAccount', this.form.account)
             this.$notify({
               title: '登录提醒',

@@ -27,7 +27,7 @@
       this.activeIndex2 = this.$route.path
       axios.get('/api/user', {
         headers: {
-          'token': this.$store.state.jwt
+          'token': localStorage.getItem('jwt')
         }
       }).then(res => {
         //console.log(res)
@@ -38,6 +38,8 @@
         }
         else {
           this.$store.commit('setName', '请求失败 ')
+          console.log("用户未登录")
+          this.$router.push('/login')
         }
       }).catch(err => {
         console.log(err.response)

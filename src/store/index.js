@@ -6,11 +6,10 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     userMessage:{
-      name:'',
-      account:'',
-      permission:''
+      name:null,
+      account:null,
+      permission:null,
     },
-    jwt: ''
   },
   getters: {
   },
@@ -18,15 +17,12 @@ export default new Vuex.Store({
     setName:(state,input)=>{
       state.userMessage.name=input;
     },
-    setJwt:(state,input)=>{
-      state.jwt=input;
-    },
     setAccount:(state,input)=>{
       state.userMessage.account=input;
     },
     setPermission:(state,input)=>{
       state.userMessage.permission=input;
-    }
+    },
   },
   actions: {
   },

@@ -6,48 +6,8 @@
         <el-button slot="append" icon="el-icon-search"></el-button>
       </el-input>
     </div>
-    <el-row :gutter="50" id="blocktop">
-      <el-col :span="5" :offset="2">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="5">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="5">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="5">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-    </el-row>
-    <el-row :gutter="50" id="blocktop">
-      <el-col :span="5" :offset="2">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="5">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="5">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="5">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-    </el-row>
-    <el-row :gutter="50" id="blocktop">
-      <el-col :span="5" :offset="2">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="5">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="5">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="5">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
-    </el-row>
+    <router-view>
+    </router-view>
   </div>
 </template>
 
