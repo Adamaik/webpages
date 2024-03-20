@@ -36,7 +36,7 @@
     data () {
       return {
         editor: null,
-        html: '<p>hello</p>',
+        html: '',
         toolbarConfig: {},
         editorConfig: { placeholder: '请输入内容...' },
         mode: 'default', // or 'simple'
@@ -61,7 +61,7 @@
         }
         axios.post("/api/upload", param, config).then((res) => {
           if (res.data.code == 1) {
-            this.$message.success("提交成功")  //需要引入elemrnt
+            this.$message.success("提交成功")  //需要引入element
           } else {
             this.$message.warning("添加失败")
           }
@@ -77,12 +77,12 @@
         this.upload(0);
       }
     },
-    mounted () {
-      // 模拟 ajax 请求，异步渲染编辑器
-      setTimeout(() => {
-        this.html = '<p>模拟 Ajax 异步设置内容 HTML</p>'
-      }, 1500)
-    },
+    // mounted () {
+    //   // 模拟 ajax 请求，异步渲染编辑器
+    //   setTimeout(() => {
+    //     this.html = '<p>模拟 Ajax 异步设置内容 HTML</p>'
+    //   }, 1500)
+    // },
     beforeDestroy () {
       const editor = this.editor
       if (editor == null) return

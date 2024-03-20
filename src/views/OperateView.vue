@@ -2,9 +2,9 @@
   <div>
     <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect"
       background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" :router=flag>
-      <el-menu-item index="/operate/home">主页</el-menu-item>
+      <el-menu-item index="/operate/home/search">主页</el-menu-item>
       <el-menu-item index="/operate/write">编写案例</el-menu-item>
-      <el-menu-item index="/operate/test">润色案例</el-menu-item>
+      <el-menu-item index="/operate/modify">润色案例</el-menu-item>
       <el-submenu index="2" id="user">
         <template slot="title">欢迎，用户{{this.$store.state.userMessage.name}}</template>
         <el-menu-item index="2-1">选项1</el-menu-item>
@@ -19,7 +19,7 @@
   export default {
     data () {
       return {
-        activeIndex2: '/operate/home',
+        activeIndex2: '',
         flag: true
       };
     },
@@ -38,7 +38,7 @@
         }
         else {
           this.$store.commit('setName', '请求失败 ')
-          console.log("用户未登录")
+          this.$message.warning("用户未登录")
           this.$router.push('/login')
         }
       }).catch(err => {
